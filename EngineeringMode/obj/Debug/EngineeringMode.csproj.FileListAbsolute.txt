@@ -1,0 +1,15 @@
+D:\sw\Console\EngineeringMode\EngineeringMode\bin\Debug\EngineeringMode.exe
+D:\sw\Console\EngineeringMode\EngineeringMode\bin\Debug\EngineeringMode.pdb
+D:\sw\Console\EngineeringMode\EngineeringMode\bin\Debug\GeneralUpDownload_FrameworkV452.dll
+D:\sw\Console\EngineeringMode\EngineeringMode\bin\Debug\RestSharp.dll
+D:\sw\Console\EngineeringMode\EngineeringMode\bin\Debug\GeneralUpDownload_FrameworkV452.pdb
+D:\sw\Console\EngineeringMode\EngineeringMode\bin\Debug\GeneralUpDownload_FrameworkV452.xml
+D:\sw\Console\EngineeringMode\EngineeringMode\bin\Debug\RestSharp.xml
+D:\sw\Console\EngineeringMode\EngineeringMode\obj\Debug\EngineeringMode.csproj.AssemblyReference.cache
+D:\sw\Console\EngineeringMode\EngineeringMode\obj\Debug\EngineeringMode.csproj.CoreCompileInputs.cache
+D:\sw\Console\EngineeringMode\EngineeringMode\obj\Debug\EngineeringMode.csproj.CopyComplete
+D:\sw\Console\EngineeringMode\EngineeringMode\obj\Debug\EngineeringMode.exe
+D:\sw\Console\EngineeringMode\EngineeringMode\obj\Debug\EngineeringMode.pdb
+D:\sw\Console\EngineeringMode\EngineeringMode\bin\Debug\MechTE_480.dll
+D:\sw\Console\EngineeringMode\EngineeringMode\bin\Debug\MechTE_480.pdb
+D:\sw\Console\EngineeringMode\EngineeringMode\bin\Debug\MechTE_480.xml
