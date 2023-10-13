@@ -39,6 +39,9 @@ namespace DesktopMenu
                 case "unload":
                     DesktopMenuDll.Unload();
                     break;
+                case "Config":
+                    DesktopMenuDll.OpenConfig();
+                    break;
             }
 
             Thread.Sleep(4000);
