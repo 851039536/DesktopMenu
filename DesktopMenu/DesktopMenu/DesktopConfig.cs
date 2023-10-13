@@ -1,5 +1,8 @@
 using System;
+using System.Diagnostics;
 using System.IO;
+using System.Threading;
+using MechTE_480.Files;
 using MechTE_480.MECH;
 
 namespace DesktopMenu.DesktopMenu
@@ -14,9 +17,12 @@ namespace DesktopMenu.DesktopMenu
         /// </summary>
         private static readonly string CurrentPath = MechUtils.GetTheCurrentProgramAndDirectory();
         
-        
         /// <summary>
-        /// 获取Windows当前选文件定路径
+        /// 当前选定文件路径
+        /// </summary>
+        private static string _selectedPath;
+        /// <summary>
+        /// 获取Windows当前选定文件路径
         /// </summary>
         /// <returns>完整路径</returns>
         private static string GetWindowsSelectedPath()
@@ -31,6 +37,29 @@ namespace DesktopMenu.DesktopMenu
                 }
             }
             return null;
+        }
+        
+        /// <summary>
+        /// 卸载 > 删除注册表
+        /// </summary>
+        public static void Unload()
+        {
+            // 管理员启动并传值
+            ProcessStartInfo startInfo = new ProcessStartInfo();
+            startInfo.UseShellExecute = true;
+            startInfo.WorkingDirectory = Environment.CurrentDirectory;
+            startInfo.FileName = CurrentPath + @"\Unload.bat";
+            startInfo.Verb = "runas"; // 请求管理员权限
+            try
+            {
+                Process.Start(startInfo);
+                
+                Thread.Sleep(2000);
+                MechFile.OpenFile(CurrentPath);
+            } catch (Exception ex)
+            {
+                Console.WriteLine(@"无法以管理员权限重新启动应用程序：" + ex.Message);
+            }
         }
     }
 }

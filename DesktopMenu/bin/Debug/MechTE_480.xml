@@ -363,7 +363,7 @@
         </member>
         <member name="M:MechTE_480.Form.MechForm.MesBox(System.String,System.String)">
             <summary>
-            弹框提示
+            默认弹框提示(确认/取消)
             </summary>
             <param name="name">描述</param>
             <param name="title">标题</param>
@@ -371,15 +371,14 @@
         </member>
         <member name="M:MechTE_480.Form.MechForm.ShowErr(System.String,System.String)">
             <summary>
-            错误提示,
-            消息框包含一个符号，该符号包含一个红色背景圆圈，圆圈中为白色 X 符号
+            错误提示(确认)
             </summary>
             <param name="title">标题</param>
             <param name="prompt">描述</param>
         </member>
         <member name="M:MechTE_480.Form.MechForm.ShowInputDialog(System.String,System.String)">
             <summary>
-            弹窗接收输入参数
+            弹窗接收参数(确认/取消)
             </summary>
             <param name="title">标题</param>
             <param name="prompt">描述</param>
@@ -631,37 +630,19 @@
             </summary>
         </member>
         <member name="M:MechTE_480.MECH.MechUtils.GetTheCurrentProgramAndDirectory">
-            <summary>
-            获取当前程序根目录
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:MechTE_480.MECH.MechUtils.GetWindowsSelectedPath">
-            <summary>
-            获取Windows当前选文件定路径
-            </summary>
-            <returns>完整路径</returns>
-        </member>
-        <member name="M:MechTE_480.MECH.MechUtils.EnterHfp">
-            <summary>
-            开启音频内部装置窗体显示到桌面
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:MechTE_480.MECH.MechUtils.QuitHfp(System.String)">
-            <summary>
-            检测进程关掉音频内部装置
-            </summary>
-            <param name="processName">rundll32</param>
-            <returns>bool</returns>
+             <summary>
+             获取当前程序根目录,
+            如: D:\sw\Console\FileDownLoad\DownLoad\bin\Debug
+             </summary>
+             <returns></returns>
         </member>
         <member name="M:MechTE_480.MECH.MechUtils.GenerateNumberStringSequence(System.Int32,System.Int32)">
             <summary>
             生成数字字符串序列
             </summary>
             <param name="startNumber">序列中第一个整数的值</param>
-            <param name="sequenceLength">要生成的顺序总条数</param>
-            <returns>生成-> 0 1 2 3...</returns>  
+            <param name="sequenceLength">生成的顺序总条数</param>
+            <returns>传入0,6 生成 0 1 2 3 4 5</returns>  
         </member>
         <member name="M:MechTE_480.MECH.MechUtils.StringToByteArray(System.String)">
             <summary>
@@ -709,6 +690,45 @@
             <param name="func"></param>
             <param name="errMsg"></param>
             <remarks>系统断言不能在 Release 版保留，用这个方法替代</remarks>
+        </member>
+        <member name="M:MechTE_480.MECH.MechWin.MessageBox(System.IntPtr,System.String,System.String,System.Int32)">
+            <summary>
+            Windows操作系统提供的一个函数，用于在应用程序中显示消息框。消息框可以用于显示警告、错误、提示等信息，并与用户进行交互。
+            </summary>
+            <param name="hWnd">窗口句柄设为0，表示使用默认窗口</param>
+            <param name="text">提示描述</param>
+            <param name="caption">标题</param>
+            <param name="options">消息框的选项，例如按钮类型和图标类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:MechTE_480.MECH.MechWin.MesBoxs(System.String,System.String)">
+            <summary>
+            弹出提示
+            </summary>
+            <param name="text">内容描述</param>
+            <param name="caption">标题</param>
+        </member>
+        <member name="M:MechTE_480.MECH.MechWin.MesBoxs(System.String,System.String,System.Int32)">
+            <summary>
+            弹出提示,传参
+            </summary>
+            <param name="text">内容描述</param>
+            <param name="caption">标题</param>
+            <param name="options">1:确认/取消,2:终止/重试/忽略,3:是/否/取消,4:是/否,5:重试/取消,6:取消/重试/继续</param>
+            <returns></returns>
+        </member>
+        <member name="M:MechTE_480.MECH.MechWin.EnterHfp">
+            <summary>
+            开启音频内部装置窗体显示到桌面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MechTE_480.MECH.MechWin.QuitHfp(System.String)">
+            <summary>
+            检测进程关掉音频内部装置
+            </summary>
+            <param name="processName">rundll32</param>
+            <returns>bool</returns>
         </member>
         <member name="T:MechTE_480.MECH.MechXML">
             <summary>
@@ -921,9 +941,9 @@
         </member>
         <member name="M:MechTE_480.Order.MechCmd.StartApp(System.String)">
             <summary>
-             启动Windows应用程序，隐藏程序界面
+             启动Windows应用/网站
             </summary>
-            <param name="appName">/应用程序路径名称</param>
+            <param name="appName">/程序路径</param>
             <returns>bool</returns>
         </member>
         <member name="M:MechTE_480.Order.MechCmd.StartApp(System.String,System.Diagnostics.ProcessWindowStyle)">

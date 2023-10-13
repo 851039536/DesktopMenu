@@ -61,9 +61,6 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="GeneralUpDownload_FrameworkV452">
-      <HintPath>..\..\..\class_library\general-up-download\GeneralUpDownload-FrameworkV452\bin\Debug\GeneralUpDownload_FrameworkV452.dll</HintPath>
-    </Reference>
     <Reference Include="MechTE_480">
       <HintPath>..\..\..\class_library\MechTE\MechTE_480\bin\Debug\MechTE_480.dll</HintPath>
     </Reference>
@@ -76,6 +73,9 @@
       <HintPath>..\packages\System.IO.Compression.ZipFile.4.3.0\lib\net46\System.IO.Compression.ZipFile.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml" />
+    <Reference Include="UpDownloadFramework">
+      <HintPath>..\..\..\class_library\general-up-download\UpDownloadFramework\bin\Debug\UpDownloadFramework.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DesktopMenu\DesktopConfig.cs" />
