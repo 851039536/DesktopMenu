@@ -78,7 +78,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DesktopMenu\DesktopConfig.cs" />
+    <Compile Include="DesktopMenu\Config.cs" />
     <Compile Include="DesktopMenu\DesktopMenu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

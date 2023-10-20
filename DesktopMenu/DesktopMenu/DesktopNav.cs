@@ -5,41 +5,45 @@ namespace DesktopMenu.DesktopMenu
     /// <summary>
     /// 导航
     /// </summary>
-    public static partial class DesktopMenuDll
+    public partial class DesktopMenuDll
     {
-        public static void OpenSwWebsite()
-        {
-            MechCmd.StartApp("http://10.55.2.25:8099/");
-        }
         public static void OpenTestTheData()
         {
-            MechCmd.StartApp("http://10.55.2.25:8089/");
+            MechProcess.StartApp("http://10.55.2.25:8089/");
         }
+
         public static void OpenVersionSystem()
         {
-            MechCmd.StartApp("http://10.55.2.25:9999/");
+            MechProcess.StartApp("http://10.55.2.25:9999/");
         }
+
         public static void OpenBackgroundSystem()
         {
-            MechCmd.StartApp("http://10.55.2.25:9000/");
-        }   
-        
+            MechProcess.StartApp("http://10.55.2.25:9000/");
+        }
+
         /// <summary>
         /// //hid验证工具
         /// </summary>
         public static void OpenSimpleHidWrite()
         {
-            MechCmd.StartShell(CurrentPath + @"\SimpleHIDWrite\SimpleHIDWrite.exe");
-        }   
+            MechProcess.StartShell(CurrentPath + @"\SimpleHIDWrite\SimpleHIDWrite.exe");
+        }
+
         public static void Airoha_ANC_Debug_Tool()
         {
-            MechCmd.StartShell(CurrentPath + @"\Airoha_ANC_Debug_Tool\Airoha_ANC_Debug_Tool.exe");
+            MechProcess.StartShell(CurrentPath + @"\Airoha_ANC_Debug_Tool\Airoha_ANC_Debug_Tool.exe");
         }
-        
+
         public static void OpenConfig()
         {
-            
-            MechCmd.StartShell(CurrentPath + @"\config\Config.txt");
-        }   
+            MechProcess.StartShell(CurrentPath + @"\config\Config.txt");
+        }
+
+        public static void CloseEthernet()
+        {
+            // ProcessStart(@"\bat\CloseEthernet.bat");
+            MechProcess.StartApps(@"\bat\CloseEthernet.bat");
+        }
     }
 }

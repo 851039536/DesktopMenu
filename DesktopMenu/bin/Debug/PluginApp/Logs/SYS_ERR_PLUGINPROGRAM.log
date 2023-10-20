@@ -1,0 +1,50 @@
+出现应用程序未处理的异常：2023/10/20 15:37:43
+异常类型：DirectoryNotFoundException
+异常消息：Could not find a part of the path 'C:\Windows\system32\PlugIns'.
+异常信息：   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.Directory.GetFiles(String path)
+   at HotPluginApp.Form1.LoadPlugIns() in D:\sw\热插拔\HotPluginApp主要源码\主要源码\HotPluginApp\Form1.cs:line 102
+
+---------------------------------------------------------
+出现应用程序未处理的异常：2023/10/20 15:38:01
+异常类型：DirectoryNotFoundException
+异常消息：Could not find a part of the path 'C:\Windows\system32\PlugIns'.
+异常信息：   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.Directory.GetFiles(String path)
+   at HotPluginApp.Form1.LoadPlugIns() in D:\sw\热插拔\HotPluginApp主要源码\主要源码\HotPluginApp\Form1.cs:line 102
+
+---------------------------------------------------------
+出现应用程序未处理的异常：2023/10/20 15:41:21
+异常类型：DirectoryNotFoundException
+异常消息：Could not find a part of the path 'C:\Windows\system32\PlugIns'.
+异常信息：   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.Directory.GetFiles(String path)
+   at HotPluginApp.Form1.LoadPlugIns() in D:\sw\热插拔\HotPluginApp主要源码\主要源码\HotPluginApp\Form1.cs:line 102
+
+---------------------------------------------------------
+出现应用程序未处理的异常：2023/10/20 15:42:53
+异常类型：DirectoryNotFoundException
+异常消息：Could not find a part of the path 'D:\sw\Console\DesktopMenu\DesktopMenu\bin\Debug\PlugIns'.
+异常信息：   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.Directory.GetFiles(String path)
+   at HotPluginApp.Form1.LoadPlugIns() in D:\sw\热插拔\HotPluginApp主要源码\主要源码\HotPluginApp\Form1.cs:line 102
+
+---------------------------------------------------------
+出现应用程序未处理的异常：2023/10/20 15:44:22
+异常类型：DirectoryNotFoundException
+异常消息：Could not find a part of the path 'D:\sw\Console\DesktopMenu\DesktopMenu\bin\Debug\PlugIns'.
+异常信息：   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.Directory.GetFiles(String path)
+   at HotPluginApp.Form1.LoadPlugIns() in D:\sw\热插拔\HotPluginApp主要源码\主要源码\HotPluginApp\Form1.cs:line 102
+
+---------------------------------------------------------

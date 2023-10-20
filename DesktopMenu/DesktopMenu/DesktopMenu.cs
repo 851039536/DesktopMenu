@@ -1,18 +1,18 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 using System.IO.Compression;
 using System.Threading.Tasks;
 using MechTE_480.Files;
 using MechTE_480.Form;
-using MechTE_480.MECH;
+using MechTE_480.Windows;
 using UpDownloadFramework;
 
 namespace DesktopMenu.DesktopMenu
 {
-     public static partial class DesktopMenuDll
+    public partial class DesktopMenuDll
     {
-        
-      // 实现一个压缩文件的方法
+        // 实现一个压缩文件的方法
         public static void CompressFile(string sourceFilePath, string zipFilePath)
         {
             // 如果文件没有找到，则报错
@@ -20,11 +20,13 @@ namespace DesktopMenu.DesktopMenu
             {
                 throw new FileNotFoundException(sourceFilePath + "文件不存在！");
             }
+
             // 如果压缩文件没有找到，则进行创建
             if (!Directory.Exists(zipFilePath))
             {
                 Directory.CreateDirectory(zipFilePath);
             }
+
             // 压缩文件的名称
             string zipFileName = zipFilePath + "\\" + Path.GetFileNameWithoutExtension(sourceFilePath) + ".zip";
             // 如果压缩文件存在，则进行删除
@@ -32,10 +34,23 @@ namespace DesktopMenu.DesktopMenu
             {
                 File.Delete(zipFileName);
             }
+
             // 开始压缩文件
             ZipFile.CreateFromDirectory(sourceFilePath, zipFileName);
         }
-        
+
+
+        public static void FunctionList()
+        {
+            var psi = new ProcessStartInfo
+            {
+                FileName = CurrentPath + @"\PluginApp\HotPluginApp.exe",
+                UseShellExecute = false,
+                WorkingDirectory = CurrentPath+@"\PluginApp",
+                CreateNoWindow = true
+            };
+            Process.Start(psi);
+        }
         /// <summary>
         /// 执行上传操作
         /// </summary>
@@ -44,11 +59,11 @@ namespace DesktopMenu.DesktopMenu
             var up = new Task(() =>
             {
                 const string http = "http://10.55.2.25:20005/api/PostUploadloadFileEngineeringMode";
-                
+
                 _selectedPath = GetWindowsSelectedPath();
-                
+
                 Console.WriteLine("1.选中的路径为：" + _selectedPath);
-                
+
                 if (_selectedPath == null)
                 {
                     Console.WriteLine("值不存在,上传失败");
@@ -86,17 +101,18 @@ namespace DesktopMenu.DesktopMenu
                     MechForm.ShowErr("提示", "不能为空");
                     return;
                 }
+
                 Console.WriteLine("下载中,请稍等...");
                 var ret = ZipFiles.DownloadEngineeringModeZip(http, downPath,
                     unPath, title);
                 if (ret)
                 {
                     MechFile.OpenFile(downPath);
-                    MechWin.MesBoxs("下载完成", "下载");  
+                    MechWin.MesBoxs("下载完成", "下载");
                 }
                 else
                 {
-                    MechWin.MesBoxs("下载失败", "下载");  
+                    MechWin.MesBoxs("下载失败", "下载");
                 }
             });
             down.Start();

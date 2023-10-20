@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading;
 using DesktopMenu.DesktopMenu;
+using MechTE_480.Order;
 
 namespace DesktopMenu
 {
@@ -14,18 +15,22 @@ namespace DesktopMenu
             {
                 case "uploadingEng":
                     DesktopMenuDll.UpEngFile();
+                    break;  
+                case "FunctionList":
+                    
+                    DesktopMenuDll.FunctionList();
                     break;
-                case "downloadEng": 
+                case "downloadEng":
                     DesktopMenuDll.DownloadEngFile();
                     break;
-                case "SimpleHIDWrite": 
+                case "SimpleHIDWrite":
                     DesktopMenuDll.OpenSimpleHidWrite();
-                    break;   
+                    break;
                 case "Airoha_ANC_Debug_Tool":
                     DesktopMenuDll.Airoha_ANC_Debug_Tool();
                     break;
                 case "SwWebsite":
-                    DesktopMenuDll.OpenSwWebsite();
+                    MechProcess.StartApp("http://10.55.2.25:8099/");
                     break;
                 case "TestTheData":
                     DesktopMenuDll.OpenTestTheData();
@@ -42,8 +47,10 @@ namespace DesktopMenu
                 case "Config":
                     DesktopMenuDll.OpenConfig();
                     break;
+                case "CloseEthernet":
+                    DesktopMenuDll.CloseEthernet();
+                    break;
             }
-
             Thread.Sleep(4000);
         }
     }
