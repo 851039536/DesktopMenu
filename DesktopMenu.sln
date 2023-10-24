@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesktopMenu", "DesktopMenu\DesktopMenu.csproj", "{BCC5A22E-D955-400A-AE17-550AD33FF946}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UcWindSystem", "UcWindSystem\UcWindSystem.csproj", "{58CEE3D5-49D1-4E06-84C2-F87D3C1B33B1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{BCC5A22E-D955-400A-AE17-550AD33FF946}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCC5A22E-D955-400A-AE17-550AD33FF946}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCC5A22E-D955-400A-AE17-550AD33FF946}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58CEE3D5-49D1-4E06-84C2-F87D3C1B33B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58CEE3D5-49D1-4E06-84C2-F87D3C1B33B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58CEE3D5-49D1-4E06-84C2-F87D3C1B33B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58CEE3D5-49D1-4E06-84C2-F87D3C1B33B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

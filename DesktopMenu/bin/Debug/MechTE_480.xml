@@ -384,6 +384,31 @@
             窗体api
             </summary>
         </member>
+        <member name="F:MechTE_480.Form.MechForm.X">
+            <summary>
+            定义当前窗体的宽度
+            </summary>
+        </member>
+        <member name="F:MechTE_480.Form.MechForm.Y">
+            <summary>
+            定义当前窗体的高度
+            </summary>
+        </member>
+        <member name="M:MechTE_480.Form.MechForm.SetTag(System.Windows.Forms.Control)">
+            <summary>
+            控件大小随窗体大小等比例缩放,
+            在窗体重载中使用
+            </summary>
+            <param name="cons"></param>
+        </member>
+        <member name="M:MechTE_480.Form.MechForm.SetControls(System.Single,System.Single,System.Windows.Forms.Control)">
+            <summary>
+            
+            </summary>
+            <param name="newx"></param>
+            <param name="newy"></param>
+            <param name="cons"></param>
+        </member>
         <member name="M:MechTE_480.Form.MechForm.MesBox(System.String,System.String)">
             <summary>
             默认弹框提示(确认/取消)

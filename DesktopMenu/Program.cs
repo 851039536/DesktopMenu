@@ -47,9 +47,6 @@ namespace DesktopMenu
                 case "Config":
                     DesktopMenuDll.OpenConfig();
                     break;
-                case "CloseEthernet":
-                    DesktopMenuDll.CloseEthernet();
-                    break;
             }
             Thread.Sleep(4000);
         }

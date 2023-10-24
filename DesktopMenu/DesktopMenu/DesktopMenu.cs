@@ -34,7 +34,6 @@ namespace DesktopMenu.DesktopMenu
             {
                 File.Delete(zipFileName);
             }
-
             // 开始压缩文件
             ZipFile.CreateFromDirectory(sourceFilePath, zipFileName);
         }

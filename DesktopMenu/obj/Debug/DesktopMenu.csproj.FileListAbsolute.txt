@@ -12,8 +12,6 @@ D:\sw\Console\EngineeringMode\DesktopMenu\obj\Debug\DesktopMenu.exe
 D:\sw\Console\EngineeringMode\DesktopMenu\obj\Debug\DesktopMenu.pdb
 D:\sw\Console\DesktopMenu\DesktopMenu\bin\Debug\DesktopMenu.exe
 D:\sw\Console\DesktopMenu\DesktopMenu\bin\Debug\DesktopMenu.pdb
-D:\sw\Console\DesktopMenu\DesktopMenu\bin\Debug\RestSharp.dll
-D:\sw\Console\DesktopMenu\DesktopMenu\bin\Debug\RestSharp.xml
 D:\sw\Console\DesktopMenu\DesktopMenu\obj\Debug\DesktopMenu.csproj.AssemblyReference.cache
 D:\sw\Console\DesktopMenu\DesktopMenu\obj\Debug\DesktopMenu.csproj.CoreCompileInputs.cache
 D:\sw\Console\DesktopMenu\DesktopMenu\obj\Debug\DesktopMenu.csproj.CopyComplete
@@ -22,4 +20,3 @@ D:\sw\Console\DesktopMenu\DesktopMenu\obj\Debug\DesktopMenu.pdb
 D:\sw\Console\DesktopMenu\DesktopMenu\bin\Debug\MechTE_480.dll
 D:\sw\Console\DesktopMenu\DesktopMenu\bin\Debug\MechTE_480.pdb
 D:\sw\Console\DesktopMenu\DesktopMenu\bin\Debug\MechTE_480.xml
-D:\sw\Console\DesktopMenu\DesktopMenu\bin\Debug\UpDownloadFramework.pdb

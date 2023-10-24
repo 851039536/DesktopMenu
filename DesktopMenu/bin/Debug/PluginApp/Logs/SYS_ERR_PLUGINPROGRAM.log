@@ -48,3 +48,133 @@
    at HotPluginApp.Form1.LoadPlugIns() in D:\sw\热插拔\HotPluginApp主要源码\主要源码\HotPluginApp\Form1.cs:line 102
 
 ---------------------------------------------------------
+出现应用程序未处理的异常：2023/10/23 17:37:52
+异常类型：FileNotFoundException
+异常消息：Could not load file or assembly 'MechTE_480_Merge, Version=6.9.12.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. The system cannot find the file specified.
+异常信息：   at UcWindSystem.WindSystem.closeEthernet_Click(Object sender, EventArgs e)
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+---------------------------------------------------------
+出现应用程序未处理的异常：2023/10/23 17:38:30
+异常类型：FileNotFoundException
+异常消息：Could not load file or assembly 'MechTE_480_Merge, Version=6.9.12.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. The system cannot find the file specified.
+异常信息：   at UcWindSystem.WindSystem.closeEthernet_Click(Object sender, EventArgs e)
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+---------------------------------------------------------
+出现应用程序未处理的异常：2023/10/23 17:38:36
+异常类型：FileNotFoundException
+异常消息：Could not load file or assembly 'MechTE_480_Merge, Version=6.9.12.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. The system cannot find the file specified.
+异常信息：   at UcWindSystem.WindSystem.closeEthernet_Click(Object sender, EventArgs e)
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+---------------------------------------------------------
+出现应用程序未处理的异常：2023/10/23 17:38:38
+异常类型：FileNotFoundException
+异常消息：Could not load file or assembly 'MechTE_480_Merge, Version=6.9.12.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. The system cannot find the file specified.
+异常信息：   at UcWindSystem.WindSystem.closeEthernet_Click(Object sender, EventArgs e)
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+---------------------------------------------------------
+出现应用程序未处理的异常：2023/10/23 17:39:39
+异常类型：FileNotFoundException
+异常消息：Could not load file or assembly 'MechTE_480_Merge, Version=6.9.12.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. The system cannot find the file specified.
+异常信息：   at UcWindSystem.WindSystem.closeEthernet_Click(Object sender, EventArgs e)
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+---------------------------------------------------------
+出现应用程序未处理的异常：2023/10/23 17:40:17
+异常类型：FileNotFoundException
+异常消息：Could not load file or assembly 'MechTE_480_Merge, Version=6.9.12.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. The system cannot find the file specified.
+异常信息：   at UcWindSystem.WindSystem.closeEthernet_Click(Object sender, EventArgs e)
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+---------------------------------------------------------
+出现应用程序未处理的异常：2023/10/23 17:40:20
+异常类型：FileNotFoundException
+异常消息：Could not load file or assembly 'MechTE_480_Merge, Version=6.9.12.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. The system cannot find the file specified.
+异常信息：   at UcWindSystem.WindSystem.closeEthernet_Click(Object sender, EventArgs e)
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+---------------------------------------------------------
+出现应用程序未处理的异常：2023/10/23 17:40:29
+异常类型：FileNotFoundException
+异常消息：Could not load file or assembly 'MechTE_480_Merge, Version=6.9.12.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. The system cannot find the file specified.
+异常信息：   at UcWindSystem.WindSystem.closeEthernet_Click(Object sender, EventArgs e)
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+---------------------------------------------------------
+出现应用程序未处理的异常：2023/10/23 17:40:32
+异常类型：FileNotFoundException
+异常消息：Could not load file or assembly 'MechTE_480_Merge, Version=6.9.12.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. The system cannot find the file specified.
+异常信息：   at UcWindSystem.WindSystem.closeEthernet_Click(Object sender, EventArgs e)
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+---------------------------------------------------------
+出现应用程序未处理的异常：2023/10/23 17:40:37
+异常类型：FileNotFoundException
+异常消息：Could not load file or assembly 'MechTE_480_Merge, Version=6.9.12.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. The system cannot find the file specified.
+异常信息：   at UcWindSystem.WindSystem.closeEthernet_Click(Object sender, EventArgs e)
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+---------------------------------------------------------

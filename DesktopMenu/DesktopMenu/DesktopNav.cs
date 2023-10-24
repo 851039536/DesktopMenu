@@ -1,3 +1,4 @@
+using MechTE_480.Files;
 using MechTE_480.Order;
 
 namespace DesktopMenu.DesktopMenu
@@ -40,10 +41,6 @@ namespace DesktopMenu.DesktopMenu
             MechProcess.StartShell(CurrentPath + @"\config\Config.txt");
         }
 
-        public static void CloseEthernet()
-        {
-            // ProcessStart(@"\bat\CloseEthernet.bat");
-            MechProcess.StartApps(@"\bat\CloseEthernet.bat");
-        }
+   
     }
 }
