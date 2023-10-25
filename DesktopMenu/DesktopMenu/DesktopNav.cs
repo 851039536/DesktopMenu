@@ -36,9 +36,13 @@ namespace DesktopMenu.DesktopMenu
             MechProcess.StartShell(CurrentPath + @"\Airoha_ANC_Debug_Tool\Airoha_ANC_Debug_Tool.exe");
         }
 
-        public static void OpenConfig()
+        public static void ToolConfig()
         {
-            MechProcess.StartShell(CurrentPath + @"\config\Config.txt");
+            MechProcess.StartShell(CurrentPath + @"\config\ToolConfig.txt");
+        }  
+        public static void SystemConfig()
+        {
+            MechProcess.StartShell(CurrentPath + @"\config\SystemConfig.txt");
         }
 
    

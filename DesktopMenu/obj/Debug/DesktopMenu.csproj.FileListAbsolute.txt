@@ -17,6 +17,4 @@ D:\sw\Console\DesktopMenu\DesktopMenu\obj\Debug\DesktopMenu.csproj.CoreCompileIn
 D:\sw\Console\DesktopMenu\DesktopMenu\obj\Debug\DesktopMenu.csproj.CopyComplete
 D:\sw\Console\DesktopMenu\DesktopMenu\obj\Debug\DesktopMenu.exe
 D:\sw\Console\DesktopMenu\DesktopMenu\obj\Debug\DesktopMenu.pdb
-D:\sw\Console\DesktopMenu\DesktopMenu\bin\Debug\MechTE_480.dll
-D:\sw\Console\DesktopMenu\DesktopMenu\bin\Debug\MechTE_480.pdb
-D:\sw\Console\DesktopMenu\DesktopMenu\bin\Debug\MechTE_480.xml
+D:\sw\Console\DesktopMenu\DesktopMenu\bin\Debug\MechTE_480_Merge.dll

@@ -16,9 +16,14 @@ namespace DesktopMenu
                 case "uploadingEng":
                     DesktopMenuDll.UpEngFile();
                     break;  
-                case "FunctionList":
-                    
-                    DesktopMenuDll.FunctionList();
+                case "SystemFunctionList":
+                    DesktopMenuDll.SystemFunctionList();
+                    break;
+                case "EnterHfp":
+                    DesktopMenuDll.EnterHfp();
+                    break;    
+                case "EnterA2DP":
+                    DesktopMenuDll.EnterA2DP();
                     break;
                 case "downloadEng":
                     DesktopMenuDll.DownloadEngFile();
@@ -44,8 +49,11 @@ namespace DesktopMenu
                 case "unload":
                     DesktopMenuDll.Unload();
                     break;
-                case "Config":
-                    DesktopMenuDll.OpenConfig();
+                case "ToolConfig":
+                    DesktopMenuDll.ToolConfig();
+                    break;   
+                case "SystemConfig":
+                    DesktopMenuDll.SystemConfig();
                     break;
             }
             Thread.Sleep(4000);

@@ -2,11 +2,11 @@
 using System.Diagnostics;
 using System.IO;
 using System.IO.Compression;
+using System.Threading;
 using System.Threading.Tasks;
 using MechTE_480.Files;
 using MechTE_480.Form;
 using MechTE_480.Windows;
-using UpDownloadFramework;
 
 namespace DesktopMenu.DesktopMenu
 {
@@ -34,22 +34,33 @@ namespace DesktopMenu.DesktopMenu
             {
                 File.Delete(zipFileName);
             }
+
             // 开始压缩文件
             ZipFile.CreateFromDirectory(sourceFilePath, zipFileName);
         }
 
 
-        public static void FunctionList()
+        public static void SystemFunctionList()
         {
             var psi = new ProcessStartInfo
             {
                 FileName = CurrentPath + @"\PluginApp\HotPluginApp.exe",
                 UseShellExecute = false,
-                WorkingDirectory = CurrentPath+@"\PluginApp",
+                WorkingDirectory = CurrentPath + @"\PluginApp",
                 CreateNoWindow = true
             };
             Process.Start(psi);
         }
+        
+        public static void EnterHfp()
+        {
+            MechWin.EnterHfp();
+        }    
+        public static void EnterA2DP()
+        {
+            MechWin.OpenA2DP();
+        }
+
         /// <summary>
         /// 执行上传操作
         /// </summary>
@@ -73,8 +84,7 @@ namespace DesktopMenu.DesktopMenu
                 {
                     // CompressFile(_selectedPath, _selectedPath);
                     Console.WriteLine("2.执行上传");
-                    var ret = ZipFiles.UploadZip(http, _selectedPath);
-                    Console.WriteLine(ret ? "3.上传成功" : "3.上传失败");
+                    var ret = MFileTransfer.UploadZip(http, _selectedPath);
                     MechWin.MesBoxs(ret ? "上传成功!" : "上传失败!", "Message");
                 }
             });
@@ -102,7 +112,7 @@ namespace DesktopMenu.DesktopMenu
                 }
 
                 Console.WriteLine("下载中,请稍等...");
-                var ret = ZipFiles.DownloadEngineeringModeZip(http, downPath,
+                var ret = MFileTransfer.DownloadZip(http,"EngineeringMode" ,downPath,
                     unPath, title);
                 if (ret)
                 {
@@ -117,5 +127,7 @@ namespace DesktopMenu.DesktopMenu
             down.Start();
             down.Wait();
         }
+        
+       
     }
 }

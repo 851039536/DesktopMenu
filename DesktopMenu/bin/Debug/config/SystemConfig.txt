@@ -1,0 +1,5 @@
+dw.png,功能集合,SystemFunctionList
+hfp.png,录音装置,EnterHfp
+A2DP.png,播放装置,EnterA2DP
+Config.png,配置,SystemConfig
+de.png,卸载,unload
