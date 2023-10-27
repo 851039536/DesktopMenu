@@ -2,7 +2,6 @@
 using System.Diagnostics;
 using System.IO;
 using System.IO.Compression;
-using System.Threading;
 using System.Threading.Tasks;
 using MechTE_480.Files;
 using MechTE_480.Form;
@@ -12,33 +11,6 @@ namespace DesktopMenu.DesktopMenu
 {
     public partial class DesktopMenuDll
     {
-        // 实现一个压缩文件的方法
-        public static void CompressFile(string sourceFilePath, string zipFilePath)
-        {
-            // 如果文件没有找到，则报错
-            if (!File.Exists(sourceFilePath))
-            {
-                throw new FileNotFoundException(sourceFilePath + "文件不存在！");
-            }
-
-            // 如果压缩文件没有找到，则进行创建
-            if (!Directory.Exists(zipFilePath))
-            {
-                Directory.CreateDirectory(zipFilePath);
-            }
-
-            // 压缩文件的名称
-            string zipFileName = zipFilePath + "\\" + Path.GetFileNameWithoutExtension(sourceFilePath) + ".zip";
-            // 如果压缩文件存在，则进行删除
-            if (File.Exists(zipFileName))
-            {
-                File.Delete(zipFileName);
-            }
-
-            // 开始压缩文件
-            ZipFile.CreateFromDirectory(sourceFilePath, zipFileName);
-        }
-
 
         public static void SystemFunctionList()
         {
