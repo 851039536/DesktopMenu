@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Diagnostics;
-using System.IO;
-using System.IO.Compression;
 using System.Threading.Tasks;
 using MechTE_480.Files;
 using MechTE_480.Form;
