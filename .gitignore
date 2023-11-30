@@ -273,3 +273,6 @@ __pycache__/
 
 # Cake - Uncomment if you are using it
 # tools/
+/DesktopMenu/bin/Debug/DesktopMenu.pdb
+/DesktopMenu/bin/Debug/DesktopMenu.exe
+/DesktopMenu/bin/Debug/PluginApp/Logs
