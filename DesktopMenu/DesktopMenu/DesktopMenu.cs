@@ -64,7 +64,7 @@ namespace DesktopMenu.DesktopMenu
         }
 
         /// <summary>
-        /// 执行下载操作.
+        /// 执行下载操作
         /// </summary>
         public static void DownloadEngFile()
         {
