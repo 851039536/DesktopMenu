@@ -2,7 +2,7 @@
 
 gitee:https://gitee.com/kaiouyang-sn/DesktopMenu
 
-github:[](https://github.com/851039536/DesktopMenu)
+github:[github](https://github.com/851039536/DesktopMenu)
 
 ## 功能实现
 
@@ -13,11 +13,8 @@ github:[](https://github.com/851039536/DesktopMenu)
 - zip文件上传
 - zip文件下载
 - 自定义程序启动
-- 开关桌面音频
-- 网站快捷导航
-- 快捷卸载
-- 工具配置
-- 系统配置
+- 网站导航
+- 卸载
 
 
 
