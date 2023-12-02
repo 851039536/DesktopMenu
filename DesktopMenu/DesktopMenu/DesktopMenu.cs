@@ -1,14 +1,19 @@
 ﻿using System;
 using System.Diagnostics;
+using System.IO;
 using System.Threading.Tasks;
 using MechTE_480.Files;
 using MechTE_480.Form;
 using MechTE_480.Windows;
+using MySql.Data.MySqlClient;
 
 namespace DesktopMenu.DesktopMenu
 {
     public partial class DesktopMenuDll
     {
+        //连接到MySQL数据库
+        private const string ConnStr = "server=10.55.2.20;user=merryte;database=sw_db;port=3306;password=merry@TE;";
+        private static readonly MySqlConnection Conn = new MySqlConnection(ConnStr);
 
         public static void SystemFunctionList()
         {
@@ -21,27 +26,111 @@ namespace DesktopMenu.DesktopMenu
             };
             Process.Start(psi);
         }
-        
+
         public static void EnterHfp()
         {
             MechWin.EnterHfp();
-        }    
+        }
+
         public static void EnterA2DP()
         {
             MechWin.OpenA2DP();
         }
 
         /// <summary>
-        /// 执行上传操作
+        /// 新增数据
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
+        private static bool AddMysql()
+        {
+            const string sqlq = "SELECT COUNT(*) FROM up_version WHERE up_version.`name` = 'exeStartTool';";
+            const string sql = "insert into up_version(id,name,versions,count,idx) values(@id,@name,@versions,@count,@idx);";
+            var versions = ReadExeStartTime();
+            //判断versions长度
+            if (versions.Length != 10) return false;
+            //更新之前查询是否有相同版本的记录总数
+            int columnCount = 0;
+            Conn.Open();
+            using (MySqlCommand command = new MySqlCommand(sqlq, Conn))
+            {
+                columnCount = Convert.ToInt32(command.ExecuteScalar());
+                if (columnCount <= 0) return false;
+                columnCount++;
+            }
+
+            if (MechForm.MesBox("是否是强制更新", "版本确认?"))
+            {
+                Console.WriteLine("强制更新");
+                //执行更新操作
+
+                using (var command = new MySqlCommand(sql, Conn))
+                {
+                    command.Parameters.AddWithValue("@id", 0);
+                    command.Parameters.AddWithValue("@name", "exeStartTool");
+                    command.Parameters.AddWithValue("@versions", versions);
+                    command.Parameters.AddWithValue("@count", columnCount);
+                    command.Parameters.AddWithValue("@idx", 1);
+                    if (command.ExecuteNonQuery() == 1)
+                    {
+                        return true;
+                    }
+                }
+
+                Conn.Close();
+                return false;
+            }
+            else
+            {
+                Console.WriteLine("手动更新");
+                //执行更新操作
+                using (var command = new MySqlCommand(sql, Conn))
+                {
+                    command.Parameters.AddWithValue("@id", 0);
+                    command.Parameters.AddWithValue("@name", "exeStartTool");
+                    command.Parameters.AddWithValue("@versions", versions);
+                    command.Parameters.AddWithValue("@count", columnCount);
+                    command.Parameters.AddWithValue("@idx", 0);
+                    if (command.ExecuteNonQuery() == 1)
+                    {
+                        return true;
+                    }
+                }
+
+                Conn.Close();
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// 获取选中exeStartTool.exe的生成时间
+        /// </summary>
+        /// <returns></returns>
+        public static string ReadExeStartTime()
+        {
+            // 指定要获取生成时间的可执行文件路径
+            string path = _selectedPath.Replace(".zip", "") + @"\exeStartTool.exe";
+
+            Console.WriteLine("时间路径格式化" + path);
+            // 创建FileInfo对象以获取文件信息
+            FileInfo fileInfo = new FileInfo(path);
+            // 获取文件的生成时间
+            DateTime creationTime = fileInfo.LastWriteTime;
+            // 打印生成时间
+            Console.WriteLine($"可执行文件的生成时间为：{creationTime.ToString("yyMMddHHmm")}");
+            return creationTime.ToString("yyMMddHHmm");
+        }
+
+        /// <summary>
+        /// 执行工程模式程序上传操作
         /// </summary>
         public static void UpEngFile()
         {
+            const string http = "http://10.55.2.25:20005/api/PostUploadloadFileEngineeringMode";
+
             var up = new Task(() =>
             {
-                const string http = "http://10.55.2.25:20005/api/PostUploadloadFileEngineeringMode";
-
                 _selectedPath = GetWindowsSelectedPath();
-
                 Console.WriteLine("1.选中的路径为：" + _selectedPath);
 
                 if (_selectedPath == null)
@@ -50,13 +139,20 @@ namespace DesktopMenu.DesktopMenu
                     return;
                 }
 
-                if (MechForm.MesBox(_selectedPath, "上传"))
+                // 判断是否是exeStartTool文件夹
+                if (_selectedPath.Contains("exeStartTool"))
                 {
-                    // CompressFile(_selectedPath, _selectedPath);
-                    Console.WriteLine("2.执行上传");
-                    var ret = MFileTransfer.UploadZip(http, _selectedPath);
-                    MechWin.MesBoxs(ret ? "上传成功!" : "上传失败!", "Message");
+                    if (!AddMysql())
+                    {
+                        Console.WriteLine("更新数据库错误,上传失败");
+                    }
                 }
+
+                //弹窗确认是否上传
+                if (!MechForm.MesBox(_selectedPath, "确认上传?")) return;
+                Console.WriteLine("2.执行上传:" + _selectedPath);
+                var ret = MFileTransfer.UploadZip(http, _selectedPath);
+                MechWin.MesBoxs(ret ? "上传成功!" : "上传失败!", "Message");
             });
             up.Start();
             up.Wait();
@@ -68,12 +164,11 @@ namespace DesktopMenu.DesktopMenu
         /// </summary>
         public static void DownloadEngFile()
         {
+            const string downPath = @"D:\TE-Download";
+            const string unPath = @"D:\TE-Download";
+            const string http = "http://10.55.2.25:20005/api/PostDownloadZIP";
             var down = new Task(() =>
             {
-                const string downPath = @"D:\TE-Download";
-                const string unPath = @"D:\TE-Download";
-                const string http = "http://10.55.2.25:20005/api/PostDownloadZIP";
-
                 var title = MechForm.ShowInputDialog("文件下载", "请输入要下载的文件名称");
                 if (title == "")
                 {
@@ -82,7 +177,7 @@ namespace DesktopMenu.DesktopMenu
                 }
 
                 Console.WriteLine("下载中,请稍等...");
-                var ret = MFileTransfer.DownloadZip(http,"EngineeringMode" ,downPath,
+                var ret = MFileTransfer.DownloadZip(http, "EngineeringMode", downPath,
                     unPath, title);
                 if (ret)
                 {
@@ -97,7 +192,5 @@ namespace DesktopMenu.DesktopMenu
             down.Start();
             down.Wait();
         }
-        
-       
     }
 }

@@ -38,7 +38,6 @@ namespace DesktopMenu.DesktopMenu
                     return path;
                 }
             }
-
             return null;
         }
 
