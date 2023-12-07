@@ -1,4 +1,3 @@
-using MechTE_480.Files;
 using MechTE_480.Order;
 
 namespace DesktopMenu.DesktopMenu
@@ -8,19 +7,24 @@ namespace DesktopMenu.DesktopMenu
     /// </summary>
     public partial class DesktopMenuDll
     {
+        private static void StartApp(string name)
+        {
+            MechProcess.StartApp(name);
+        }
+
         public static void OpenTestTheData()
         {
-            MechProcess.StartApp("http://10.55.2.25:8089/");
+            StartApp("http://10.55.2.25:8089/");
         }
 
         public static void OpenVersionSystem()
         {
-            MechProcess.StartApp("http://10.55.2.25:9999/");
+            StartApp("http://10.55.2.25:9999/");
         }
 
         public static void OpenBackgroundSystem()
         {
-            MechProcess.StartApp("http://10.55.2.25:9000/");
+            StartApp("http://10.55.2.25:9000/");
         }
 
         /// <summary>
@@ -39,12 +43,12 @@ namespace DesktopMenu.DesktopMenu
         public static void ToolConfig()
         {
             MechProcess.StartShell(CurrentPath + @"\config\ToolConfig.txt");
-        }  
+        }
         public static void SystemConfig()
         {
             MechProcess.StartShell(CurrentPath + @"\config\SystemConfig.txt");
         }
 
-   
+
     }
 }

@@ -73,7 +73,7 @@ namespace UcWindSystem
         public WindSystem()
         {
             InitializeComponent();
-            ucName = "Wind系统"; // 插件名称
+            ucName = "wind常用"; // 插件名称
         }
 
         private void closeEthernet_Click(object sender,EventArgs e)

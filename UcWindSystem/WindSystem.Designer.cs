@@ -84,10 +84,10 @@
             // 
             PnlClose.BackColor = System.Drawing.Color.Silver;
             PnlClose.Controls.Add(closeEthernet);
-            PnlClose.Location = new System.Drawing.Point(2,35);
+            PnlClose.Location = new System.Drawing.Point(9,50);
             PnlClose.Margin = new System.Windows.Forms.Padding(2,4,2,4);
             PnlClose.Name = "PnlClose";
-            PnlClose.Size = new System.Drawing.Size(417,245);
+            PnlClose.Size = new System.Drawing.Size(417,235);
             PnlClose.TabIndex = 2;
             // 
             // panel1
@@ -98,10 +98,10 @@
             panel1.Controls.Add(btnControl);
             panel1.Controls.Add(btnNcpa);
             panel1.Controls.Add(devmgmt);
-            panel1.Location = new System.Drawing.Point(441,35);
+            panel1.Location = new System.Drawing.Point(459,50);
             panel1.Margin = new System.Windows.Forms.Padding(2,4,2,4);
             panel1.Name = "panel1";
-            panel1.Size = new System.Drawing.Size(372,245);
+            panel1.Size = new System.Drawing.Size(372,235);
             panel1.TabIndex = 3;
             // 
             // btnOsk
@@ -175,7 +175,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(4,4);
+            label1.Location = new System.Drawing.Point(9,14);
             label1.Margin = new System.Windows.Forms.Padding(2,0,2,0);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(92,27);
@@ -185,7 +185,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(441,4);
+            label2.Location = new System.Drawing.Point(459,14);
             label2.Margin = new System.Windows.Forms.Padding(2,0,2,0);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(92,27);
@@ -195,7 +195,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new System.Drawing.Point(2,284);
+            label3.Location = new System.Drawing.Point(9,302);
             label3.Margin = new System.Windows.Forms.Padding(2,0,2,0);
             label3.Name = "label3";
             label3.Size = new System.Drawing.Size(92,27);
@@ -206,7 +206,7 @@
             // 
             panel2.BackColor = System.Drawing.Color.Silver;
             panel2.Controls.Add(btnDisk);
-            panel2.Location = new System.Drawing.Point(2,315);
+            panel2.Location = new System.Drawing.Point(9,337);
             panel2.Margin = new System.Windows.Forms.Padding(2,4,2,4);
             panel2.Name = "panel2";
             panel2.Size = new System.Drawing.Size(417,178);
@@ -244,7 +244,7 @@
             Font = new System.Drawing.Font("微软雅黑",15F,System.Drawing.FontStyle.Regular,System.Drawing.GraphicsUnit.Point,134);
             Margin = new System.Windows.Forms.Padding(7,6,7,6);
             Name = "WindSystem";
-            Size = new System.Drawing.Size(1325,633);
+            Size = new System.Drawing.Size(1277,748);
             Load += WindSystem_Load_1;
             Resize += WindSystem_Resize;
             PnlClose.ResumeLayout(false);
