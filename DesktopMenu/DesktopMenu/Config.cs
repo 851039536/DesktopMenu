@@ -1,10 +1,9 @@
 using System;
-using System.Diagnostics;
 using System.IO;
 using System.Threading;
 using MechTE_480.Files;
-using MechTE_480.MECH;
-using MechTE_480.Order;
+using MechTE_480.process;
+using MechTE_480.util;
 
 namespace DesktopMenu.DesktopMenu
 {
@@ -16,7 +15,7 @@ namespace DesktopMenu.DesktopMenu
         /// <summary>
         /// 当前程序根目录路径
         /// </summary>
-        private static readonly string CurrentPath = MechUtils.GetTheCurrentProgramAndDirectory();
+        private static readonly string CurrentPath = MUtil.GetTheCurrentProgramAndDirectory();
 
         /// <summary>
         /// 当前选定文件路径
@@ -46,9 +45,9 @@ namespace DesktopMenu.DesktopMenu
         /// </summary>
         public static void Unload()
         {
-            MechProcess.StartApps(@"\Unload.bat");
+            MProcess.StartApps(@"\Unload.bat");
             Thread.Sleep(2000);
-            MechFile.OpenFile(CurrentPath);
+            MFile.OpenFile(CurrentPath);
         }
     }
 }

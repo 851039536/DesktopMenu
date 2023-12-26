@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 using DesktopMenu.DesktopMenu;
-using MechTE_480.Order;
+using MechTE_480.process;
 
 namespace DesktopMenu
 {
@@ -35,7 +35,7 @@ namespace DesktopMenu
                     DesktopMenuDll.Airoha_ANC_Debug_Tool();
                     break;
                 case "SwWebsite":
-                    MechProcess.StartApp("http://10.55.2.25:8099/");
+                    MProcess.StartApp("http://10.55.2.25:8099/");
                     break;
                 case "TestTheData":
                     DesktopMenuDll.OpenTestTheData();

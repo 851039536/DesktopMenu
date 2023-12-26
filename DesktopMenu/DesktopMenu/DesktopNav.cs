@@ -1,4 +1,4 @@
-using MechTE_480.Order;
+using MechTE_480.process;
 
 namespace DesktopMenu.DesktopMenu
 {
@@ -9,7 +9,7 @@ namespace DesktopMenu.DesktopMenu
     {
         private static void StartApp(string name)
         {
-            MechProcess.StartApp(name);
+            MProcess.StartApp(name);
         }
 
         public static void OpenTestTheData()
@@ -32,21 +32,21 @@ namespace DesktopMenu.DesktopMenu
         /// </summary>
         public static void OpenSimpleHidWrite()
         {
-            MechProcess.StartShell(CurrentPath + @"\SimpleHIDWrite\SimpleHIDWrite.exe");
+            MProcess.Shell(CurrentPath + @"\SimpleHIDWrite\SimpleHIDWrite.exe");
         }
 
         public static void Airoha_ANC_Debug_Tool()
         {
-            MechProcess.StartShell(CurrentPath + @"\Airoha_ANC_Debug_Tool\Airoha_ANC_Debug_Tool.exe");
+            MProcess.Shell(CurrentPath + @"\Airoha_ANC_Debug_Tool\Airoha_ANC_Debug_Tool.exe");
         }
 
         public static void ToolConfig()
         {
-            MechProcess.StartShell(CurrentPath + @"\config\ToolConfig.txt");
+            MProcess.Shell(CurrentPath + @"\config\ToolConfig.txt");
         }
         public static void SystemConfig()
         {
-            MechProcess.StartShell(CurrentPath + @"\config\SystemConfig.txt");
+            MProcess.Shell(CurrentPath + @"\config\SystemConfig.txt");
         }
 
 

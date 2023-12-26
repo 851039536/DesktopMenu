@@ -59,7 +59,7 @@ namespace DesktopMenu.DesktopMenu
                 columnCount++;
             }
 
-            if (MechForm.MesBox("是否是强制更新", "版本确认?"))
+            if (MForm.MesBox("是否是强制更新", "版本确认?"))
             {
                 Console.WriteLine("强制更新");
                 //执行更新操作
@@ -149,7 +149,7 @@ namespace DesktopMenu.DesktopMenu
                 }
 
                 //弹窗确认是否上传
-                if (!MechForm.MesBox(_selectedPath, "确认上传?")) return;
+                if (!MForm.MesBox(_selectedPath, "确认上传?")) return;
                 Console.WriteLine("2.执行上传:" + _selectedPath);
                 var ret = MFileTransfer.UploadZip(http, _selectedPath);
                 MechWin.MesBoxs(ret ? "上传成功!" : "上传失败!", "Message");
@@ -169,10 +169,10 @@ namespace DesktopMenu.DesktopMenu
             const string http = "http://10.55.2.25:20005/api/PostDownloadZIP";
             var down = new Task(() =>
             {
-                var title = MechForm.ShowInputDialog("文件下载", "请输入要下载的文件名称");
+                var title = MForm.ShowInputDialog("文件下载", "请输入要下载的文件名称");
                 if (title == "")
                 {
-                    MechForm.ShowErr("提示", "不能为空");
+                    MForm.ShowErr("提示", "不能为空");
                     return;
                 }
 
@@ -181,7 +181,7 @@ namespace DesktopMenu.DesktopMenu
                     unPath, title);
                 if (ret)
                 {
-                    MechFile.OpenFile(downPath);
+                    MFile.OpenFile(downPath);
                     MechWin.MesBoxs("下载完成", "下载");
                 }
                 else

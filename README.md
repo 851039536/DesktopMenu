@@ -16,8 +16,6 @@ github:[github](https://github.com/851039536/DesktopMenu)
 - 网站导航
 - 卸载
 
-
-
 ## 桌面功能注册
 
 1. 如果MechTE_ContextMenu.dll生成32位 , RegAsm.exe就要使用32 , 64位同理, 在Debug目录中替换RegAsm
@@ -35,7 +33,7 @@ github:[github](https://github.com/851039536/DesktopMenu)
 
 SW系统工具配置
 
-![image-20231130171208432](http://kai.snblogs.cn/typora/image-20231130171208432.png)
+ ![image-20231130171208432](http://kai.snblogs.cn/typora/image-20231130171208432.png)
 
 以上图示
 
@@ -66,7 +64,7 @@ dw.png,功能集合,SystemFunctionList
 
 - 启动函数 : 如我配置EnterHfp , 那么我们在写功能时Program.args传入就是EnterHfp 
 
-   ![image-20231130172014857](http://kai.snblogs.cn/typora/image-20231130172014857.png)
+    ![image-20231130172014857](http://kai.snblogs.cn/typora/image-20231130172014857.png)
 
   
 
@@ -80,14 +78,14 @@ dw.png,功能集合,SystemFunctionList
 
  ![image-20231130172247886](http://kai.snblogs.cn/typora/image-20231130172247886.png)
 
-
-
 ## 快捷导航
 
+规划中...
 
+## 上传下载
 
-## zip上传下载
-
-
+规划中...
 
 ## 卸载
+
+规划中...
