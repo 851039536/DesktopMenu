@@ -29,12 +29,12 @@ namespace DesktopMenu.DesktopMenu
 
         public static void EnterHfp()
         {
-            MechWin.EnterHfp();
+            MWin.EnterHfp();
         }
 
         public static void EnterA2DP()
         {
-            MechWin.OpenA2DP();
+            MWin.OpenA2Dp();
         }
 
         /// <summary>
@@ -152,7 +152,7 @@ namespace DesktopMenu.DesktopMenu
                 if (!MForm.MesBox(_selectedPath, "确认上传?")) return;
                 Console.WriteLine("2.执行上传:" + _selectedPath);
                 var ret = MFileTransfer.UploadZip(http, _selectedPath);
-                MechWin.MesBoxs(ret ? "上传成功!" : "上传失败!", "Message");
+                MWin.MesBoxs(ret ? "上传成功!" : "上传失败!", "Message");
             });
             up.Start();
             up.Wait();
@@ -182,11 +182,11 @@ namespace DesktopMenu.DesktopMenu
                 if (ret)
                 {
                     MFile.OpenFile(downPath);
-                    MechWin.MesBoxs("下载完成", "下载");
+                    MWin.MesBoxs("下载完成", "下载");
                 }
                 else
                 {
-                    MechWin.MesBoxs("下载失败", "下载");
+                    MWin.MesBoxs("下载失败", "下载");
                 }
             });
             down.Start();

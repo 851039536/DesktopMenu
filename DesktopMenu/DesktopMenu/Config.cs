@@ -15,7 +15,7 @@ namespace DesktopMenu.DesktopMenu
         /// <summary>
         /// 当前程序根目录路径
         /// </summary>
-        private static readonly string CurrentPath = MUtil.GetTheCurrentProgramAndDirectory();
+        private static readonly string CurrentPath = MUtil.GetCurrentProgramDirectory();
 
         /// <summary>
         /// 当前选定文件路径

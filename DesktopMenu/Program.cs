@@ -56,7 +56,7 @@ namespace DesktopMenu
                     DesktopMenuDll.SystemConfig();
                     break;
             }
-            Thread.Sleep(4000);
+            Thread.Sleep(2000);
         }
     }
 }
