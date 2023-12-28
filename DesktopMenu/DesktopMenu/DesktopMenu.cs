@@ -44,21 +44,24 @@ namespace DesktopMenu.DesktopMenu
         /// <returns></returns>
         private static bool AddMysql()
         {
-            const string sqlq = "SELECT COUNT(*) FROM up_version WHERE up_version.`name` = 'exeStartTool';";
-            const string sql = "insert into up_version(id,name,versions,count,idx) values(@id,@name,@versions,@count,@idx);";
+            const string counts = "SELECT COUNT(*) FROM up_version WHERE up_version.`name` = 'exeStartTool';";
+            const string sql = "insert into up_version(id,name,versions,count,idx,describes) values(@id,@name,@versions,@count,@idx,@describes);";
             var versions = ReadExeStartTime();
             //判断versions长度
             if (versions.Length != 10) return false;
             //更新之前查询是否有相同版本的记录总数
             int columnCount = 0;
             Conn.Open();
-            using (MySqlCommand command = new MySqlCommand(sqlq, Conn))
+            using (var command = new MySqlCommand(counts, Conn))
             {
                 columnCount = Convert.ToInt32(command.ExecuteScalar());
                 if (columnCount <= 0) return false;
                 columnCount++;
             }
 
+            
+            var describe = MForm.ShowInputDialog("描述", "请输入程序更新内容!");
+            
             if (MForm.MesBox("是否是强制更新", "版本确认?"))
             {
                 Console.WriteLine("强制更新");
@@ -71,6 +74,7 @@ namespace DesktopMenu.DesktopMenu
                     command.Parameters.AddWithValue("@versions", versions);
                     command.Parameters.AddWithValue("@count", columnCount);
                     command.Parameters.AddWithValue("@idx", 1);
+                    command.Parameters.AddWithValue("@describes", describe);
                     if (command.ExecuteNonQuery() == 1)
                     {
                         return true;
@@ -91,6 +95,7 @@ namespace DesktopMenu.DesktopMenu
                     command.Parameters.AddWithValue("@versions", versions);
                     command.Parameters.AddWithValue("@count", columnCount);
                     command.Parameters.AddWithValue("@idx", 0);
+                    command.Parameters.AddWithValue("@describes", describe);
                     if (command.ExecuteNonQuery() == 1)
                     {
                         return true;
@@ -142,6 +147,7 @@ namespace DesktopMenu.DesktopMenu
                 // 判断是否是exeStartTool文件夹
                 if (_selectedPath.Contains("exeStartTool"))
                 {
+                    //判断数据是否上传
                     if (!AddMysql())
                     {
                         Console.WriteLine("更新数据库错误,上传失败");
@@ -149,14 +155,13 @@ namespace DesktopMenu.DesktopMenu
                 }
 
                 //弹窗确认是否上传
-                if (!MForm.MesBox(_selectedPath, "确认上传?")) return;
+                // if (!MForm.MesBox(_selectedPath, "确认上传?")) return;
                 Console.WriteLine("2.执行上传:" + _selectedPath);
                 var ret = MFileTransfer.UploadZip(http, _selectedPath);
                 MWin.MesBoxs(ret ? "上传成功!" : "上传失败!", "Message");
             });
             up.Start();
             up.Wait();
-            Console.WriteLine(up.IsCompleted);
         }
 
         /// <summary>
