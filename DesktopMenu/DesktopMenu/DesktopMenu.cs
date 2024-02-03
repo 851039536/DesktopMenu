@@ -66,7 +66,6 @@ namespace DesktopMenu.DesktopMenu
             {
                 Console.WriteLine("强制更新");
                 //执行更新操作
-
                 using (var command = new MySqlCommand(sql, Conn))
                 {
                     command.Parameters.AddWithValue("@id", 0);
