@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using System.Threading;
 using MechTE_480.Files;
-using MechTE_480.process;
+using MechTE_480.ProcessCategory;
 using MechTE_480.util;
 
 namespace DesktopMenu.DesktopMenu
@@ -26,7 +26,7 @@ namespace DesktopMenu.DesktopMenu
         /// 获取Windows当前选定文件路径
         /// </summary>
         /// <returns>完整路径</returns>
-        private static string GetWindowsSelectedPath()
+        public static string GetWindowsSelectedPath()
         {
             string[] commandLineArgs = Environment.GetCommandLineArgs();
             if (commandLineArgs.Length > 1)
@@ -45,8 +45,8 @@ namespace DesktopMenu.DesktopMenu
         /// </summary>
         public static void Unload()
         {
-            MProcess.StartApps(@"\Unload.bat");
-            Thread.Sleep(2000);
+            MProcessUtil.StartApps(@"\Unload.bat");
+            Thread.Sleep(5000);
             MFile.OpenFile(CurrentPath);
         }
     }

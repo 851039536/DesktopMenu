@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 using DesktopMenu.DesktopMenu;
-using MechTE_480.process;
+using MechTE_480.ProcessCategory;
 
 namespace DesktopMenu
 {
@@ -9,12 +9,23 @@ namespace DesktopMenu
     {
         public static void Main(string[] args)
         {
+            
+            // DesktopMenuDll.DeleteFile(@"SwATE_Net");
+            
+            // DesktopMenuDll.QiNiuUpLoading(@"D:\sw\编程资料\軟件安裝包\SwATE_Net.zip");
+
+            // DesktopMenuDll.DownloadFile("http://s9wytc9kr.hn-bkt.clouddn.com/SwATE_Net?e=1709715206&token=rKyHGPMv87TXon7_IIBlUdAgORhH_EdTb7OhPWjI:jFyDfh9Y71ve6dFAsvkh0VjDuPE=",@"D:\sw\嵌入式\SwATE_Net.zip");
+            
             Console.WriteLine("值0:" + args[0]);
             Console.WriteLine("值1:" + args[1]);
             switch (args[1])
             {
+                case "QiNiuUpLoading":
+                    DesktopMenuDll.QiNiuUpLoading(DesktopMenuDll.GetWindowsSelectedPath());
+                    break;   
+                
                 case "uploadingEng":
-                    DesktopMenuDll.UpEngFile();
+                    DesktopMenuDll.TeUploadingEng();
                     break;  
                 case "SystemFunctionList":
                     DesktopMenuDll.SystemFunctionList();
@@ -35,7 +46,7 @@ namespace DesktopMenu
                     DesktopMenuDll.Airoha_ANC_Debug_Tool();
                     break;
                 case "SwWebsite":
-                    MProcess.StartApp("http://10.55.2.25:8099/");
+                    MProcessUtil.StartApp("http://10.55.2.25:8099/");
                     break;
                 case "TestTheData":
                     DesktopMenuDll.OpenTestTheData();

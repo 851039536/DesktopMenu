@@ -1,4 +1,5 @@
-using MechTE_480.process;
+
+using MechTE_480.ProcessCategory;
 
 namespace DesktopMenu.DesktopMenu
 {
@@ -9,19 +10,17 @@ namespace DesktopMenu.DesktopMenu
     {
         private static void StartApp(string name)
         {
-            MProcess.StartApp(name);
+            MProcessUtil.StartApp(name);
         }
 
         public static void OpenTestTheData()
         {
             StartApp("http://10.55.2.25:8089/");
         }
-
         public static void OpenVersionSystem()
         {
             StartApp("http://10.55.2.25:9999/");
         }
-
         public static void OpenBackgroundSystem()
         {
             StartApp("http://10.55.2.25:9000/");
@@ -32,21 +31,21 @@ namespace DesktopMenu.DesktopMenu
         /// </summary>
         public static void OpenSimpleHidWrite()
         {
-            MProcess.Shell(CurrentPath + @"\SimpleHIDWrite\SimpleHIDWrite.exe");
+            MProcessUtil.Shell(CurrentPath + @"\SimpleHIDWrite\SimpleHIDWrite.exe");
         }
 
         public static void Airoha_ANC_Debug_Tool()
         {
-            MProcess.Shell(CurrentPath + @"\Airoha_ANC_Debug_Tool\Airoha_ANC_Debug_Tool.exe");
+            MProcessUtil.Shell(CurrentPath + @"\Airoha_ANC_Debug_Tool\Airoha_ANC_Debug_Tool.exe");
         }
 
         public static void ToolConfig()
         {
-            MProcess.Shell(CurrentPath + @"\config\ToolConfig.txt");
+            MProcessUtil.Shell(CurrentPath + @"\config\ToolConfig.txt");
         }
         public static void SystemConfig()
         {
-            MProcess.Shell(CurrentPath + @"\config\SystemConfig.txt");
+            MProcessUtil.Shell(CurrentPath + @"\config\SystemConfig.txt");
         }
 
 

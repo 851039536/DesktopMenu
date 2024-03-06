@@ -64,7 +64,7 @@ dw.png,功能集合,SystemFunctionList
 
 - 启动函数 : 如我配置EnterHfp , 那么我们在写功能时Program.args传入就是EnterHfp 
 
-    ![image-20231130172014857](http://kai.snblogs.cn/typora/image-20231130172014857.png)
+     ![image-20231130172014857](http://kai.snblogs.cn/typora/image-20231130172014857.png)
 
   
 
@@ -84,8 +84,10 @@ dw.png,功能集合,SystemFunctionList
 
 ## 上传下载
 
-规划中...
+### 上传七牛云
+
+实现七牛云上传
 
 ## 卸载
 
-规划中...
+问题点: 程序执行卸载  , 会黑屏 , 需手动卸载一遍
