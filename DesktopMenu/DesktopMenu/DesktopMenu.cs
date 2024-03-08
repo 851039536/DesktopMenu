@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Threading.Tasks;
 using MechTE_480.Files;
-using MechTE_480.Form;
+using MechTE_480.FormCategory;
 using MechTE_480.Windows;
 using MySql.Data.MySqlClient;
 using Qiniu.Http;
@@ -63,9 +63,9 @@ namespace DesktopMenu.DesktopMenu
             }
 
 
-            var describe = MForm.ShowInputDialog("描述", "请输入程序更新内容!");
+            var describe = MFormUtil.ShowInputDialog("描述", "请输入程序更新内容!");
 
-            if (MForm.MesBox("是否是强制更新", "版本确认?"))
+            if (MFormUtil.MesBox("是否是强制更新", "版本确认?"))
             {
                 Console.WriteLine("强制更新");
                 //执行更新操作
@@ -173,10 +173,10 @@ namespace DesktopMenu.DesktopMenu
             const string http = "http://10.55.2.25:20005/api/PostDownloadZIP";
             var down = new Task(() =>
             {
-                var title = MForm.ShowInputDialog("文件下载", "请输入要下载的文件名称");
+                var title = MFormUtil.ShowInputDialog("文件下载", "请输入要下载的文件名称");
                 if (title == "")
                 {
-                    MForm.ShowErr("提示", "不能为空");
+                    MFormUtil.ShowErr("提示", "不能为空");
                     return;
                 }
                 Console.WriteLine("下载中,请稍等...");

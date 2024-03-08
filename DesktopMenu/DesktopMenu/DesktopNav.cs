@@ -31,21 +31,21 @@ namespace DesktopMenu.DesktopMenu
         /// </summary>
         public static void OpenSimpleHidWrite()
         {
-            MProcessUtil.Shell(CurrentPath + @"\SimpleHIDWrite\SimpleHIDWrite.exe");
+            MProcessUtil.ExCmd(CurrentPath + @"\SimpleHIDWrite\SimpleHIDWrite.exe");
         }
 
         public static void Airoha_ANC_Debug_Tool()
         {
-            MProcessUtil.Shell(CurrentPath + @"\Airoha_ANC_Debug_Tool\Airoha_ANC_Debug_Tool.exe");
+            MProcessUtil.ExCmd(CurrentPath + @"\Airoha_ANC_Debug_Tool\Airoha_ANC_Debug_Tool.exe");
         }
 
         public static void ToolConfig()
         {
-            MProcessUtil.Shell(CurrentPath + @"\config\ToolConfig.txt");
+            MProcessUtil.ExCmd(CurrentPath + @"\config\ToolConfig.txt");
         }
         public static void SystemConfig()
         {
-            MProcessUtil.Shell(CurrentPath + @"\config\SystemConfig.txt");
+            MProcessUtil.ExCmd(CurrentPath + @"\config\SystemConfig.txt");
         }
 
 

@@ -9,13 +9,6 @@ namespace DesktopMenu
     {
         public static void Main(string[] args)
         {
-            
-            // DesktopMenuDll.DeleteFile(@"SwATE_Net");
-            
-            // DesktopMenuDll.QiNiuUpLoading(@"D:\sw\编程资料\軟件安裝包\SwATE_Net.zip");
-
-            // DesktopMenuDll.DownloadFile("http://s9wytc9kr.hn-bkt.clouddn.com/SwATE_Net?e=1709715206&token=rKyHGPMv87TXon7_IIBlUdAgORhH_EdTb7OhPWjI:jFyDfh9Y71ve6dFAsvkh0VjDuPE=",@"D:\sw\嵌入式\SwATE_Net.zip");
-            
             Console.WriteLine("值0:" + args[0]);
             Console.WriteLine("值1:" + args[1]);
             switch (args[1])
@@ -23,8 +16,7 @@ namespace DesktopMenu
                 case "QiNiuUpLoading":
                     DesktopMenuDll.QiNiuUpLoading(DesktopMenuDll.GetWindowsSelectedPath());
                     break;   
-                
-                case "uploadingEng":
+                case "TeUploadingEng":
                     DesktopMenuDll.TeUploadingEng();
                     break;  
                 case "SystemFunctionList":
