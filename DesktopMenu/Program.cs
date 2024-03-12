@@ -9,22 +9,26 @@ namespace DesktopMenu
     {
         public static void Main(string[] args)
         {
+            FtpHelper ftp = new FtpHelper(@"10.55.2.25", 21, "anonymous", "", @"/190006");
+            ftp.Delete(@"/190006/test/123.exe");
+            ftp.DeleteDirectory(@"/190006/test2");
+
             Console.WriteLine("值0:" + args[0]);
             Console.WriteLine("值1:" + args[1]);
             switch (args[1])
             {
                 case "QiNiuUpLoading":
                     DesktopMenuDll.QiNiuUpLoading(DesktopMenuDll.GetWindowsSelectedPath());
-                    break;   
+                    break;
                 case "TeUploadingEng":
                     DesktopMenuDll.TeUploadingEng();
-                    break;  
+                    break;
                 case "SystemFunctionList":
                     DesktopMenuDll.SystemFunctionList();
                     break;
                 case "EnterHfp":
                     DesktopMenuDll.EnterHfp();
-                    break;    
+                    break;
                 case "EnterA2DP":
                     DesktopMenuDll.EnterA2DP();
                     break;
@@ -54,11 +58,12 @@ namespace DesktopMenu
                     break;
                 case "ToolConfig":
                     DesktopMenuDll.ToolConfig();
-                    break;   
+                    break;
                 case "SystemConfig":
                     DesktopMenuDll.SystemConfig();
                     break;
             }
+
             Thread.Sleep(2000);
         }
     }
