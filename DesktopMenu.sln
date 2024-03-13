@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesktopMenu", "DesktopMenu\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UcWindSystem", "UcWindSystem\UcWindSystem.csproj", "{58CEE3D5-49D1-4E06-84C2-F87D3C1B33B1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesktopMenuTests", "DesktopMenuTests\DesktopMenuTests.csproj", "{F45FA184-7EE0-4B70-AE81-85993611423C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{58CEE3D5-49D1-4E06-84C2-F87D3C1B33B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58CEE3D5-49D1-4E06-84C2-F87D3C1B33B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58CEE3D5-49D1-4E06-84C2-F87D3C1B33B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F45FA184-7EE0-4B70-AE81-85993611423C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F45FA184-7EE0-4B70-AE81-85993611423C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F45FA184-7EE0-4B70-AE81-85993611423C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F45FA184-7EE0-4B70-AE81-85993611423C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

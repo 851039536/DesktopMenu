@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading;
 using DesktopMenu.DesktopMenu;
+using DesktopMenu.QiNiu;
 using MechTE_480.ProcessCategory;
 
 namespace DesktopMenu
@@ -9,16 +10,12 @@ namespace DesktopMenu
     {
         public static void Main(string[] args)
         {
-            FtpHelper ftp = new FtpHelper(@"10.55.2.25", 21, "anonymous", "", @"/190006");
-            ftp.Delete(@"/190006/test/123.exe");
-            ftp.DeleteDirectory(@"/190006/test2");
-
             Console.WriteLine("值0:" + args[0]);
-            Console.WriteLine("值1:" + args[1]);
+            // Console.WriteLine("值1:" + args[1]);
             switch (args[1])
             {
                 case "QiNiuUpLoading":
-                    DesktopMenuDll.QiNiuUpLoading(DesktopMenuDll.GetWindowsSelectedPath());
+                    QiNiuHelper.QiNiuUpLoading("software/",DesktopMenuDll.GetWindowsSelectedPath());
                     break;
                 case "TeUploadingEng":
                     DesktopMenuDll.TeUploadingEng();

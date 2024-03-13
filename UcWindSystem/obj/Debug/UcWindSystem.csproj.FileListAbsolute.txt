@@ -5,7 +5,7 @@ D:\sw\Console\DesktopMenu\UcWindSystem\bin\Debug\PlugInBase.pdb
 D:\sw\Console\DesktopMenu\UcWindSystem\obj\Debug\UcWindSystem.WindSystem.resources
 D:\sw\Console\DesktopMenu\UcWindSystem\obj\Debug\UcWindSystem.csproj.GenerateResource.cache
 D:\sw\Console\DesktopMenu\UcWindSystem\obj\Debug\UcWindSystem.csproj.CoreCompileInputs.cache
-D:\sw\Console\DesktopMenu\UcWindSystem\obj\Debug\UcWindSystem.csproj.CopyComplete
 D:\sw\Console\DesktopMenu\UcWindSystem\obj\Debug\UcWindSystem.dll
 D:\sw\Console\DesktopMenu\UcWindSystem\obj\Debug\UcWindSystem.pdb
 D:\sw\Console\DesktopMenu\UcWindSystem\obj\Debug\UcWindSystem.csproj.AssemblyReference.cache
+D:\sw\Console\DesktopMenu\UcWindSystem\obj\Debug\UcWindSy.80D1CB2C.Up2Date
