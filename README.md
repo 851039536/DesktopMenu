@@ -1,4 +1,4 @@
-# 桌面菜单插件
+# 菜单插件
 
 gitee:https://gitee.com/kaiouyang-sn/DesktopMenu
 
@@ -6,7 +6,7 @@ github:[github](https://github.com/851039536/DesktopMenu)
 
 ## 功能实现
 
-已实现功能如下
+已实现功能:
 
 - 自定义工具菜单
 - 自定义桌面图标
@@ -14,22 +14,25 @@ github:[github](https://github.com/851039536/DesktopMenu)
 - zip文件下载
 - 自定义程序启动
 - 网站导航
-- 卸载
 
-## 桌面功能注册
+## 菜单注册
 
-1. 如果MechTE_ContextMenu.dll生成32位 , RegAsm.exe就要使用32 , 64位同理, 在Debug目录中替换RegAsm
-2. 在debug路径下找到注册.bat , 使用管理员运行 , 显示成功注册即可
+`RegAsm.exe` 是 .NET Framework 中的一个工具，用于将 .NET 程序集（通常是 DLL 或 EXE 文件）注册到 COM 互操作层，以便非 .NET 应用程序可以使用它们。`RegAsm.exe` 有 32 位和 64 位版本，取决于您想注册的程序集是 32 位还是 64 位。
+
+
+
+1. 如果您的 `MechTE_ContextMenu.dll` 是 32 位的，那么您应该使用 32 位的 `RegAsm.exe`。同理，如果 `MechTE_ContextMenu.dll` 是 64 位的，那么您应该使用 64 位的 `RegAsm.exe`
+2. 在 `debug` 路径下找到了一个名为 `注册.bat` 的批处理文件 , 使用管理员运行 , 显示成功注册即可
 
  ![image-20231130170332492](http://kai.snblogs.cn/typora/image-20231130170332492.png)
 
-在桌面中右键可查看到
+   3.在桌面中右键可查看到
 
  ![image-20231130170838233](http://kai.snblogs.cn/typora/image-20231130170838233.png)
 
 
 
-## 自定义工具菜单
+## 自定义菜单
 
 SW系统工具配置
 
@@ -64,7 +67,7 @@ dw.png,功能集合,SystemFunctionList
 
 - 启动函数 : 如我配置EnterHfp , 那么我们在写功能时Program.args传入就是EnterHfp 
 
-     ![image-20231130172014857](http://kai.snblogs.cn/typora/image-20231130172014857.png)
+      ![image-20231130172014857](http://kai.snblogs.cn/typora/image-20231130172014857.png)
 
   
 
@@ -82,11 +85,11 @@ dw.png,功能集合,SystemFunctionList
 
 规划中...
 
-## 上传下载
+## 文件上传
 
-### 上传七牛云
+### 七牛云
 
-实现七牛云上传
+实现七牛云api文件上传
 
 ## 卸载
 

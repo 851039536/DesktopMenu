@@ -5,9 +5,6 @@ using MechTE_480.Files;
 using MechTE_480.FormCategory;
 using MechTE_480.Windows;
 using MySql.Data.MySqlClient;
-using Qiniu.Http;
-using Qiniu.Storage;
-using Qiniu.Util;
 using FileInfo = System.IO.FileInfo;
 
 namespace DesktopMenu.DesktopMenu
@@ -154,8 +151,6 @@ namespace DesktopMenu.DesktopMenu
                         MWin.MesBoxs( "更新数据库错误!", "错误");
                     }
                 }
-                //弹窗确认是否上传
-                // if (!MForm.MesBox(_selectedPath, "确认上传?")) return;
                 var ret = MFileTransfer.UploadZip(http, _selectedPath);
                 MWin.MesBoxs(ret ? "上传成功!" : "上传失败!", "Message");
             });
